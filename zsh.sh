@@ -16,4 +16,4 @@ if test ! $(which brew); then
 fi
 
 # Make sure we’re using the latest Homebrew.
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+ruby -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

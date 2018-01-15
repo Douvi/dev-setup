@@ -139,7 +139,7 @@ heroku update
 # Install Cask
 brew tap caskroom/versions
 
-# Elixir
+# Elixir - 1.3.4
 brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/59d7802e40ffbe2c7c840354530bc62b5a1538f9/Formula/elixir.rb
 brew install jpeg
 
