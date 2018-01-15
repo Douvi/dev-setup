@@ -137,7 +137,6 @@ brew install heroku-toolbelt
 heroku update
 
 # Install Cask
-brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
 
 # Elixir
@@ -147,7 +146,7 @@ brew install jpeg
 # Core casks
 #brew cask install --appdir="/Applications" alfred
 #brew cask install --appdir="~/Applications" iterm2
-brew cask install --appdir="~/Applications" java
+brew cask install --appdir="~/Applications" java8
 #brew cask install --appdir="~/Applications" xquartz
 
 # Development tool casks
