@@ -28,7 +28,6 @@ brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/c41ee814a3
 
 # Install mysql workbench
 # Install Cask
-# brew install caskroom/cask/brew-cask
 # brew cask install --appdir="/Applications" mysqlworkbench
 
 # Remove outdated versions from the cellar.

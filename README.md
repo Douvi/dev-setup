@@ -1566,7 +1566,6 @@ In terms of a GUI client for MySQL, I'm used to the official and free [MySQL Wor
 
 The [datastores.sh script](#datastoressh-script) installs MySQL Workbench.  If you prefer to install it separately, run:
 
-    $ brew install caskroom/cask/brew-cask
     $ brew cask install --appdir="/Applications" mysqlworkbench
 
 You can also find the MySQL Workbench download [here](http://www.mysql.com/downloads/workbench/). (**Note**: It will ask you to sign in, you don't need to, just click on "No thanks, just start my download!" at the bottom.)
