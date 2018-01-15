@@ -18,17 +18,15 @@ fi
 # Make sure we’re using the latest Homebrew.
 brew update
 
-# Install Cask
-brew install caskroom/cask/brew-cask
-brew tap caskroom/versions
+brew install node
+# Install Appium iOS Dependencies
+brew install carthage
+brew install libimobiledevice --HEAD
+brew install ios-deploy
 
-brew cask install --appdir="~/Applications" java
-brew cask install --appdir="~/Applications" Caskroom/versions/intellij-idea-ce
-brew cask install --appdir="~/Applications" android-studio
-brew cask install --appdir="~/Applications" Caskroom/versions/datagrip
-brew cask install --appdir="~/Applications" Caskroom/versions/appcode
-
-# brew install android-sdk
-
-# Remove outdated versions from the cellar.
+# Remove outXdated versions from the cellar.
 brew cleanup
+
+# Install Appium
+npm install -g appium
+npm install wd

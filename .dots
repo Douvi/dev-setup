@@ -10,14 +10,6 @@ function runDots() {
     # Run sections based on command line arguments
     for ARG in "$@"
     do
-        if [ $ARG == "bootstrap" ] || [ $ARG == "all" ]; then
-            echo ""
-            echo "------------------------------"
-            echo "Syncing the dev-setup repo to your local machine."
-            echo "------------------------------"
-            echo ""
-            cd ~ && curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
-        fi
         if [ $ARG == "osxprep" ] || [ $ARG == "all" ]; then
             # Run the osxprep.sh Script
             echo ""
@@ -26,6 +18,14 @@ function runDots() {
             echo "------------------------------"
             echo ""
             ./osxprep.sh
+        fi
+        if [ $ARG == "zsh" ] || [ $ARG == "all" ]; then
+            # Run the android.sh Script
+            echo "------------------------------"
+            echo "Setting up zsh development environment."
+            echo "------------------------------"
+            echo ""
+            ./android.sh
         fi
         if [ $ARG == "brew" ] || [ $ARG == "all" ]; then
             # Run the brew.sh Script
@@ -40,37 +40,6 @@ function runDots() {
             echo ""
             ./brew.sh
         fi
-        if [ $ARG == "osx" ] || [ $ARG == "all" ]; then
-            # Run the osx.sh Script
-            # I strongly suggest you read through the commented osx.sh
-            # source file and tweak any settings based on your personal
-            # preferences. The script defaults are intended for you to
-            # customize. For example, if you are not running an SSD you
-            # might want to change some of the settings listed in the
-            # SSD section.
-            echo ""
-            echo "------------------------------"
-            echo "Setting sensible OSX defaults."
-            echo "------------------------------"
-            echo ""
-            ./osx.sh
-        fi
-        if [ $ARG == "pydata" ] || [ $ARG == "all" ]; then
-            # Run the pydata.sh Script
-            echo "------------------------------"
-            echo "Setting up Python data development environment."
-            echo "------------------------------"
-            echo ""
-            ./pydata.sh
-        fi
-        if [ $ARG == "aws" ] || [ $ARG == "all" ]; then
-            # Run the aws.sh Script
-            echo "------------------------------"
-            echo "Setting up AWS development environment."
-            echo "------------------------------"
-            echo ""
-            ./aws.sh
-        fi
         if [ $ARG == "datastores" ] || [ $ARG == "all" ]; then
             # Run the datastores.sh Script
             echo "------------------------------"
@@ -79,18 +48,18 @@ function runDots() {
             echo ""
             ./datastores.sh
         fi
-        if [ $ARG == "web" ] || [ $ARG == "all" ]; then
-            # Run the web.sh Script
-            echo "------------------------------"
-            echo "Setting up JavaScript web development environment."
-            echo "------------------------------"
-            echo ""
-            ./web.sh
-        fi
         if [ $ARG == "android" ] || [ $ARG == "all" ]; then
             # Run the android.sh Script
             echo "------------------------------"
             echo "Setting up Android development environment."
+            echo "------------------------------"
+            echo ""
+            ./android.sh
+        fi
+        if [ $ARG == "qa" ] || [ $ARG == "all" ]; then
+            # Run the android.sh Script
+            echo "------------------------------"
+            echo "Setting up QA development environment."
             echo "------------------------------"
             echo ""
             ./android.sh
