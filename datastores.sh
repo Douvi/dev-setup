@@ -21,6 +21,7 @@ brew update
 # Install data stores
 # brew install mysql
 brew install postgresql
+brew unlink postgresql
 brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/c41ee814a3da12fc508b79fd691f6f97c26cb165/Formula/postgresql.rb
 # brew install mongo
 # brew install redis
