@@ -43,8 +43,8 @@ defaults write com.apple.systemuiserver menuExtras -array \
 # Set highlight color to green
 #defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"
 
-# Set sidebar icon size to medium
-defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
+# Set sidebar icon size to small
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
 # Always show scrollbars
 #defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
@@ -55,7 +55,7 @@ defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 #defaults write NSGlobalDomain NSScrollAnimationEnabled -bool false
 
 # Increase window resize speed for Cocoa applications
-defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+#defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
@@ -75,11 +75,11 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 #defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Remove duplicates in the “Open With” menu (also see `lscleanup` alias)
-/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
+#/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
 
 # Display ASCII control characters using caret notation in standard text views
 # Try e.g. `cd /tmp; unidecode "\x{0000}" > cc.txt; open -e cc.txt`
-defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
+#defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
 
 # Disable Resume system-wide
 #defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
@@ -91,7 +91,7 @@ defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
 #defaults write com.apple.CrashReporter DialogType -string "none"
 
 # Set Help Viewer windows to non-floating mode
-defaults write com.apple.helpviewer DevMode -bool true
+#defaults write com.apple.helpviewer DevMode -bool true
 
 # Fix for the ancient UTF-8 bug in QuickLook (https://mths.be/bbo)
 # Commented out, as this is known to cause problems in various Adobe apps :(
@@ -106,7 +106,7 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 sudo systemsetup -setrestartfreeze on
 
 # Never go into computer sleep mode
-sudo systemsetup -setcomputersleep Off > /dev/null
+#sudo systemsetup -setcomputersleep Off > /dev/null
 
 # Set the computer to sleep after 60 minutes
 #sudo systemsetup -setcomputersleep 60
@@ -135,17 +135,17 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 ###############################################################################
 
 # Disable local Time Machine snapshots
-sudo tmutil disablelocal
+#sudo tmutil disablelocal
 
 # Disable hibernation (speeds up entering sleep mode)
-sudo pmset -a hibernatemode 0
+#sudo pmset -a hibernatemode 0
 
 # Remove the sleep image file to save disk space
-sudo rm -f /private/var/vm/sleepimage
+#sudo rm -f /private/var/vm/sleepimage
 # Create a zero-byte file instead…
-sudo touch /private/var/vm/sleepimage
+#sudo touch /private/var/vm/sleepimage
 # …and make sure it can’t be rewritten
-sudo chflags uchg /private/var/vm/sleepimage
+#sudo chflags uchg /private/var/vm/sleepimage
 
 # Disable the sudden motion sensor as it’s not useful for SSDs
 #sudo pmset -a sms 0
@@ -160,13 +160,13 @@ defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Trackpad: map bottom right corner to right-click
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
-defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
-defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
+#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
+#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+#defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
+#defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
 
 # Disable “natural” (Lion-style) scrolling
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+#defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
@@ -176,23 +176,23 @@ defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # Use scroll gesture with the Ctrl (^) modifier key to zoom
-defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
-defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+#defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+#defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 # Follow the keyboard focus while zoomed in
-defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
+#defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
 # Disable press-and-hold for keys in favor of key repeat
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+#defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # Set language and text formats
-#defaults write NSGlobalDomain AppleLanguages -array "en"
-#defaults write NSGlobalDomain AppleLocale -string "en_US@currency=USD"
-#defaults write NSGlobalDomain AppleMeasurementUnits -string "Inches"
-#defaults write NSGlobalDomain AppleMetricUnits -bool false
+defaults write NSGlobalDomain AppleLanguages -array "en"
+defaults write NSGlobalDomain AppleLocale -string "en_US@currency=USD"
+defaults write NSGlobalDomain AppleMeasurementUnits -string "Inches"
+defaults write NSGlobalDomain AppleMetricUnits -bool false
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 #sudo systemsetup -settimezone "America/New_York" > /dev/null
@@ -222,23 +222,23 @@ defaults write com.apple.screencapture location -string "${HOME}/Pictures/Screen
 defaults write com.apple.screencapture type -string "png"
 
 # Disable shadow in screenshots
-defaults write com.apple.screencapture disable-shadow -bool true
+#defaults write com.apple.screencapture disable-shadow -bool true
 
 # Enable subpixel font rendering on non-Apple LCDs
-defaults write NSGlobalDomain AppleFontSmoothing -int 2
+#defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
 # Enable HiDPI display modes (requires restart)
-sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
+#sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
 
 # Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
-defaults write com.apple.finder QuitMenuItem -bool true
+#defaults write com.apple.finder QuitMenuItem -bool true
 
 # Finder: disable window animations and Get Info animations
-defaults write com.apple.finder DisableAllAnimations -bool true
+#defaults write com.apple.finder DisableAllAnimations -bool true
 
 # Set Desktop as the default location for new Finder windows
 # For other paths, use `PfLo` and `file:///full/path/here/`
@@ -258,7 +258,7 @@ defaults write com.apple.finder AppleShowAllFiles -bool true
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 # Finder: show status bar
-#defaults write com.apple.finder ShowStatusBar -bool true
+defaults write com.apple.finder ShowStatusBar -bool true
 
 # Finder: show path bar
 defaults write com.apple.finder ShowPathbar -bool true
@@ -322,7 +322,7 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
 # Disable the warning before emptying the Trash
-defaults write com.apple.finder WarnOnEmptyTrash -bool false
+#defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
 # Empty Trash securely by default
 defaults write com.apple.finder EmptyTrashSecurely -bool true
@@ -361,7 +361,7 @@ defaults write com.apple.dock tilesize -int 36
 defaults write com.apple.dock mineffect -string "scale"
 
 # Minimize windows into their application’s icon
-#defaults write com.apple.dock minimize-to-application -bool true
+defaults write com.apple.dock minimize-to-application -bool true
 
 # Enable spring loading for all Dock items
 defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
@@ -372,17 +372,17 @@ defaults write com.apple.dock show-process-indicators -bool true
 # Wipe all (default) app icons from the Dock
 # This is only really useful when setting up a new Mac, or if you don’t use
 # the Dock to launch apps.
-#defaults write com.apple.dock persistent-apps -array
+defaults write com.apple.dock persistent-apps -array
 
 # Don’t animate opening applications from the Dock
-defaults write com.apple.dock launchanim -bool false
+#defaults write com.apple.dock launchanim -bool false
 
 # Speed up Mission Control animations
-defaults write com.apple.dock expose-animation-duration -float 0.1
+#defaults write com.apple.dock expose-animation-duration -float 0.1
 
 # Don’t group windows by application in Mission Control
 # (i.e. use the old Exposé behavior instead)
-defaults write com.apple.dock expose-group-by-app -bool false
+#defaults write com.apple.dock expose-group-by-app -bool false
 
 # Disable Dashboard
 #defaults write com.apple.dashboard mcx-disabled -bool true
@@ -394,15 +394,15 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 defaults write com.apple.dock mru-spaces -bool false
 
 # Remove the auto-hiding Dock delay
-defaults write com.apple.dock autohide-delay -float 0
+#defaults write com.apple.dock autohide-delay -float 0
 # Remove the animation when hiding/showing the Dock
-defaults write com.apple.dock autohide-time-modifier -float 0
+#defaults write com.apple.dock autohide-time-modifier -float 0
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
 # Make Dock icons of hidden applications translucent
-#defaults write com.apple.dock showhidden -bool true
+defaults write com.apple.dock showhidden -bool true
 
 # Disable the Launchpad gesture (pinch with thumb and three fingers)
 #defaults write com.apple.dock showLaunchpadGestureEnabled -int 0
@@ -474,7 +474,7 @@ defaults write com.apple.Safari ShowSidebarInTopSites -bool false
 defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
 
 # Enable Safari’s debug menu
-defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+#defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
 # Make Safari’s search banners default to Contains instead of Starts With
 defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
