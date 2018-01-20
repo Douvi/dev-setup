@@ -142,16 +142,18 @@ brew tap caskroom/versions
 # Elixir - 1.3.4
 brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/59d7802e40ffbe2c7c840354530bc62b5a1538f9/Formula/elixir.rb
 brew install jpeg
+brew install pngquant
 
 # Core casks
 #brew cask install --appdir="/Applications" alfred
 #brew cask install --appdir="~/Applications" iterm2
-brew cask install --appdir="~/Applications" java8
+brew cask install --appdir="/Applications" java8
 #brew cask install --appdir="~/Applications" xquartz
 
 # Development tool casks
 #brew cask install --appdir="/Applications" sublime-text
 brew cask install --appdir="/Applications" atom
+brew cask install --appdir="/Applications" shiftit
 #brew cask install --appdir="/Applications" virtualbox
 #brew cask install --appdir="/Applications" vagrant
 #brew cask install --appdir="/Applications" macdown
