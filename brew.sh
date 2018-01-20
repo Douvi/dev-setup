@@ -144,6 +144,9 @@ brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/59d7802e40
 brew install jpeg
 brew install pngquant
 
+# iOS
+brew install cocoapods
+
 # Core casks
 #brew cask install --appdir="/Applications" alfred
 #brew cask install --appdir="~/Applications" iterm2
