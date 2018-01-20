@@ -72,7 +72,7 @@ function runDots() {
             echo ""
             ./work.sh
         fi
-        if [ $ARG == "osx" ]; then
+        if [ $ARG == "osx" ] || [ $ARG == "all" ]; then
             # Run the android.sh Script
             echo "------------------------------"
             echo "Setting up osx development environment."
