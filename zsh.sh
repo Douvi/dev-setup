@@ -10,7 +10,7 @@ ABSPATH=$(cd "$(dirname "$0")"; pwd)
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 #Make sure we’re using the latest Homebrew.
-ruby -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+#sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Add alias
 echo "source $ABSPATH/.aliases" >> ~/.zshrc
