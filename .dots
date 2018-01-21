@@ -19,14 +19,6 @@ function runDots() {
             echo ""
             ./osxprep.sh
         fi
-        if [ $ARG == "zsh" ] || [ $ARG == "all" ]; then
-            # Run the android.sh Script
-            echo "------------------------------"
-            echo "Setting up zsh development environment."
-            echo "------------------------------"
-            echo ""
-            ./zsh.sh
-        fi
         if [ $ARG == "brew" ] || [ $ARG == "all" ]; then
             # Run the brew.sh Script
             # For a full listing of installed formulae and apps, refer to
@@ -72,13 +64,21 @@ function runDots() {
             echo ""
             ./work.sh
         fi
-        if [ $ARG == "osx" ]; then
+        if [ $ARG == "osx" ] || [ $ARG == "all" ]; then
             # Run the android.sh Script
             echo "------------------------------"
             echo "Setting up osx development environment."
             echo "------------------------------"
             echo ""
             ./osx.sh
+        fi
+        if [ $ARG == "zsh" ] || [ $ARG == "all" ]; then
+            # Run the android.sh Script
+            echo "------------------------------"
+            echo "Setting up zsh development environment."
+            echo "------------------------------"
+            echo ""
+            ./zsh.sh
         fi
     done
 
