@@ -25,3 +25,6 @@ Thumbs.db
 
 # Repo scratch directory
 scratch/
+
+node_modules/
+package-lock.json
