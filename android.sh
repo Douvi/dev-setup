@@ -22,7 +22,7 @@ brew update
 brew tap caskroom/versions
 
 brew cask install --appdir="/Applications" java8
-brew cask install --appdir="/Applications" intellij-idea-ce
+brew cask install --appdir="/Applications" intellij-idea
 brew cask install --appdir="/Applications" android-studio
 brew cask install --appdir="/Applications" datagrip
 brew cask install --appdir="/Applications" appcode

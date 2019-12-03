@@ -142,6 +142,12 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 alias reload="exec $SHELL -l"
 
 #
+# DB
+#
+
+alias dbsetup="$ABSPATH/other/db_setup.sh"
+
+#
 # Git
 #
 
@@ -160,6 +166,8 @@ alias sim_list="xcrun simctl list"
 #
 # RockSpoon
 #
+
+alias conf="atom ~/Documents/conf"
 
 # Android
 alias and="cd ~/Documents/android/projects/rockspoon-pos"
@@ -188,3 +196,24 @@ alias pandaios="cd ~/Documents/panda/projects/panda_ios"
 alias pandaand="cd ~/Documents/panda/projects/panda_android"
 alias pandanode="cd ~/Documents/panda/projects/panda_node"
 alias pandaphoenix="cd ~/Documents/panda/projects/panda_phoenix"
+
+# Exercism
+alias exc="cd ~/Documents/Exercism"
+alias ego="cd ~/Documents/Exercism/go"
+
+# Go
+alias gs="cd ~/Documents/go/src"
+alias gsr="cd ~/Documents/go/src/github.com/rockspoon"
+alias gb="go get"
+alias gor="go run"
+alias gr_start="gr_stop& ds; dpr& gr_soa; gr_aut& gr_kit& gr_flo&"
+alias gr_soa="~/Documents/go/./start_soa.sh"
+alias gr_aut="cd ~/Documents/go/src/github.com/rockspoon/rs.cor.authentication-ms/; go run main.go"
+alias gr_kit="cd ~/Documents/go/src/github.com/rockspoon/rs.com.kitchen-display-ms/; go run main.go"
+alias gr_flo="cd ~/Documents/go/src/github.com/rockspoon/rs.cor.floor-plan-ms/; go run main.go"
+alias gr_stop='sudo kill -9 $(pgrep -f go-build)'
+
+# Docker
+alias dpr="docker run -p 27017:27017 -e MONGODB_ROOT_PASSWORD=fakePassword -e MONGODB_PRIMARY_ROOT_PASSWORD=fakePassword bitnami/mongodb:4.0-ol-7"
+alias dr="docker run -p 27017:27017 bitnami/mongodb:4.0-ol-7"
+alias ds='docker kill "$(docker ps -q)"'

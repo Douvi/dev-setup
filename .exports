@@ -24,3 +24,31 @@ export MANPAGER='less -X';
 
 # Always enable colored `grep` output.
 export GREP_OPTIONS='--color=auto';
+
+#Rockspoon
+export MONGO_URL=localhost
+export MONGO_DB_NAME=test
+export NAMESPACE=dev
+export JWT_PATH=~/Documents/go/src/bitbucket.org/rockspoon/auth.json
+
+# Golang
+export GO111MODULE=on
+export GOPATH=~/Documents/go
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+
+#Rockspoon - RS
+export RS_QUEUE_PROJECT='rockspoon'
+export RS_QUEUE_NAMESPACE='default'
+export RS_QUEUE_TOPIC_NAME='invite'
+export RS_DB_MONGO_URL='{"username":"root","password":"fakePassword","addresses":[":27017"],"ssl":false,"source":"admin","database":"local-rs","dev":true}'
+export RS_DB_MONGO_CONN='{"username":"root","password":"fakePassword","addresses":[":27017"],"ssl":false,"source":"admin","database":"local-rs","dev":true}'
+export RS_DB_MONGO_NAME=admin
+
+export RS_MS_FILE_PATH="${GOPATH}/src/github.com/rockspoon/rs.pay.merchant-registration-ms"
+export SLACK_URL=https://hooks.slack.com/services/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
+
+#Rockspoon - SOAJS
+export SOAJS_ENV=DEV
+export SOAJS_REGISTRY_API=127.0.0.1:11000
+export SOAJS_DEPLOY_MANUAL=1

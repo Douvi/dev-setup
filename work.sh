@@ -42,7 +42,7 @@ creat_path panda
 
 clone ~/Documents/android/projects git@bitbucket.org:rockspoon/rockspoon-pos.git
 clone ~/Documents/ios/projects git@bitbucket.org:rockspoon/rockspoon-ios.git
-clone ~/Documents/backend/projects git@bitbucket.org:rockspoon/rockspoon-backoffice.git
+clone ~/Documents/backend/projects git@bitbucket.org:rockspoon/rockspoon-backend.git
 
 clone ~/Documents/panda/projects git@bitbucket.org:e_roussillon/panda_android.git
 clone ~/Documents/panda/projects git@bitbucket.org:e_roussillon/panda_ios.git
